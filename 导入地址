@@ -1,0 +1,13 @@
+import type { Wallet } from './types'
+
+export const wallets: Wallet[] = [
+  {
+    privateKey: '', // 私钥
+    address: '0x01a3204049f34644ac12c98fb9ebc7ce12886ddf27908665245b6a71b8219bc3', // 地址
+  },
+]
+
+export const resolvedWallets: Wallet[] = wallets.map((wallet, index) => ({
+  label: `Account ${index + 1}`,
+  ...wallet,
+}))
